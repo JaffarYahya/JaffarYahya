@@ -793,6 +793,17 @@ footer {
 }
 
 /* Project Detail Page Responsive Styles */
+/* Tablets and small desktops (993px - 1199px) */
+@media (min-width: 993px) and (max-width: 1199px) {
+    .project-summary h2 {
+        font-size: 1.95rem;
+    }
+
+    .project-summary p {
+        font-size: 1.03rem;
+    }
+}
+
 @media (max-width: 992px) {
     main.container {
         padding-left: 1rem;
@@ -885,6 +896,17 @@ footer {
     }
 }
 
+/* Medium tablets (769px - 992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+    .project-summary h2 {
+        font-size: 1.85rem;
+    }
+
+    .project-summary p {
+        font-size: 0.98rem;
+    }
+}
+
 /* Project detail sections */
 .project-files {
     background: rgba(255, 255, 255, 0.05);
@@ -914,6 +936,28 @@ footer {
     color: rgba(248, 249, 250, 0.9);
     line-height: 1.8;
     font-size: 1.05rem;
+}
+
+/* Large screens (1400px and up) */
+@media (min-width: 1400px) {
+    .project-summary h2 {
+        font-size: 2.2rem;
+    }
+
+    .project-summary p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Large desktops (1200px - 1399px) */
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .project-summary h2 {
+        font-size: 2.1rem;
+    }
+
+    .project-summary p {
+        font-size: 1.08rem;
+    }
 }
 
 .project-files .carousel {
@@ -1052,7 +1096,6 @@ footer {
     .carousel-indicators button {
         width: 8px;
         height: 8px;
-        border-radius: 50%;
     }
 
     /* Improve touch targets on mobile */
@@ -1078,6 +1121,17 @@ footer {
     }
 }
 
+/* Small phones (401px - 576px) */
+@media (min-width: 401px) and (max-width: 576px) {
+    .project-summary h2 {
+        font-size: 1.45rem;
+    }
+
+    .project-summary p {
+        font-size: 0.92rem;
+    }
+}
+
 /* Additional responsive improvements for tablets */
 @media (min-width: 577px) and (max-width: 768px) {
     main.container h1 {
@@ -1087,6 +1141,11 @@ footer {
     .project-summary h2,
     .project-files h2 {
         font-size: 1.7rem;
+    }
+
+    .project-summary p {
+        font-size: 0.97rem;
+        line-height: 1.75;
     }
 }
 
@@ -1221,6 +1280,7 @@ footer {
 
     .project-summary p {
         font-size: 0.85rem;
+        line-height: 1.55;
     }
 
     .carousel {
@@ -1245,6 +1305,18 @@ footer {
     .project-files .carousel-control-next {
         width: 35px;
         height: 35px;
+    }
+}
+
+/* Very small devices (phones, less than 360px) */
+@media (max-width: 360px) {
+    .project-summary h2 {
+        font-size: 1.15rem;
+    }
+
+    .project-summary p {
+        font-size: 0.82rem;
+        line-height: 1.5;
     }
 }
 
