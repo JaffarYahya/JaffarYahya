@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تصميم اعلان - معرض أعمالي</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .project-navigation a:hover {
+            background: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px #0FC2C0;
+        }
+        /* Prevent basic save interactions on images (this page only) */
+        .carousel { position: relative; }
+        .no-save-overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+            background: transparent;
+        }
+        .carousel-control-prev,
+        .carousel-control-next,
+        .carousel-indicators { z-index: 3; }
+        img { -webkit-user-drag: none; user-select: none; }
+    </style>
+</head>
+<body>
+    <main class="container my-5 px-3 px-md-4 px-lg-5">
+        <h1 class="text-center mb-4 mb-md-5">تصميم اعلان لحملة سفر</h1>
+        <section class="project-files mb-4">
+            <h2 class="text-center mb-3 mb-md-4" style="margin: 1.4em 0;">ملفات وصور المشروع</h2>
+            <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../images/TravelCampaignAnnouncement/Alarbain.jpg" class="d-block w-100 img-fluid rounded" alt="صورة المشروع 1">
+                    </div>
+                </div>
+                <div class="no-save-overlay" aria-hidden="true"></div>
+            </div>
+        </section>
+
+        <section class="project-summary mb-4">
+            <h2 class="mb-3 mb-md-4">وصف المشروع</h2>
+            <p class="mb-0">هذا العمل هو تصميم إعلان بصري احترافي لحملة للأربعين، يهدف إلى إبراز قدسية المناسبة وروحها الإيمانية بأسلوب راقٍ ومؤثر. يعتمد التصميم على طابع داكن أنيق مع توظيف اللون الذهبي ليعكس الفخامة والروحانية، ويمنح الإعلان حضورًا قويًا ومهيبًا.
+
+                تم تنفيذ العمل باستخدام Adobe Photoshop مع دمج احترافي للعناصر البصرية، وتنسيق متوازن للمحتوى النصي والأيقونات، مع استخدام مؤثرات خفيفة للظلال والإضاءة لإبراز التفاصيل ومنح التصميم عمقًا بصريًا جذابًا.
+                الخط العربي المستخدم في العنوان أضفى طابعًا دينيًا أصيلًا يعزز هوية الإعلان، بينما ساعدت الأيقونات التوضيحية على إيصال المعلومات (السكن، المواصلات، الطعام، الفيزا) بشكل واضح وسلس.
+                
+                اعتمد التصميم على توزيع منظم للمحتوى، مع إبراز مدة الرحلة والأسعار بوضوح، مما يجعله مناسبًا للنشر على منصات التواصل الاجتماعي والإعلانات الرقمية، ويساهم في جذب الفئة المستهدفة وتحفيزهم على التواصل والتسجيل في الحملة.</p>
+        </section>
+ 
+        <section class="project-navigation text-center">
+            <a href="../index.html" style="border: none;" class="btn btn-primary">العودة إلى معرض الأعمال</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="mailto:jaffaralih.yahya@gmail.com" target="_blank" class="social-link"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.instagram.com/jaffaraliyahya/" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/97336008166" target="_blank" class="social-link"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        
+        <p class="copyright">جميع الحقوق محفوظة © 2025</p>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+      // Disable context menu on the whole page
+      document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+      });
+
+      // Prevent dragging images
+      document.querySelectorAll('img').forEach(function(img) {
+        img.setAttribute('draggable', 'false');
+        img.addEventListener('dragstart', function(e) { e.preventDefault(); });
+      });
+
+      // Block common save shortcuts (Ctrl/Cmd+S or Ctrl/Cmd+P or Ctrl/Cmd+Shift+S)
+      document.addEventListener('keydown', function(e) {
+        const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+        const ctrlOrCmd = isMac ? e.metaKey : e.ctrlKey;
+        if (ctrlOrCmd && (e.key === 's' || e.key === 'p' || (e.shiftKey && e.key.toLowerCase() === 's'))) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+      }, true);
+
+      // Keep overlay on to block save; allow native scroll on PDF slide only
+      (function() {
+        const carouselEl = document.getElementById('projectCarousel');
+        const overlayEl = document.querySelector('.no-save-overlay');
+        if (!carouselEl || !overlayEl) return;
+
+        const updateOverlayPointer = function() {
+          const activeItem = carouselEl.querySelector('.carousel-item.active');
+          const hasPdf = !!(activeItem && activeItem.querySelector('.pdf-object'));
+          overlayEl.style.display = 'block';
+          overlayEl.style.pointerEvents = hasPdf ? 'none' : 'auto';
+        };
+
+        carouselEl.addEventListener('slide.bs.carousel', function() {
+          // ensure overlay blocks during transition
+          overlayEl.style.pointerEvents = 'auto';
+        });
+        carouselEl.addEventListener('slid.bs.carousel', updateOverlayPointer);
+        // Initial state
+        updateOverlayPointer();
+      })();
+    </script>
+  </body>
+</html>
